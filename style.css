@@ -1,0 +1,586 @@
+body{
+
+    margin: 0;
+    background: #272343;
+    font-family: Quicksand;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: #e3f6f5;
+    width: 100%;
+
+}
+
+header h1{
+
+    font-family: inherit;
+    font-weight: bolder;
+    font-size: calc(20px + 2svw);
+    margin: .25em;
+    color: black;
+
+}
+
+main{
+
+    width: 85svw;
+    height: 72.5svh;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+main #grid{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 1svw 1.5svw;
+    background-color: #bae8e8;
+    border-radius: 1.5em;
+    flex-direction: row;
+    transition: all .1s ease-in-out;
+    position: relative;
+
+}   
+
+main #grid .konu{
+
+    width: auto;
+    height: auto;
+    padding: calc(.5svw + .5em);
+    border-radius: 1em;
+    transition: all .1s ease-in-out;
+    font-size: calc(1svw + .5em);
+
+}
+
+
+main #grid .konu:hover{
+
+    background-color: #f2f1f1;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(212, 198, 198);
+
+}
+
+main #grid p{
+
+    font-family: inherit;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-size: calc(.75em + .5svw);
+
+}
+
+main .sure{
+
+    color: #f2f1f1;
+    position: absolute;
+    left: 10svw;
+    display: inline-block;
+    font-size: calc(1.5svw + 1.5em);
+    transition: all 1s ease-in;
+
+}
+
+main #or{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: auto;
+    height: 85%;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+main .oyun{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;
+    height: 50%;
+    padding: 2.5svw;
+    background-color: #e3f6f5;
+    position: relative;
+    width: 35%;
+    border-radius: 1em;
+
+}
+
+main #isim #secilen{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+main #isim h2{
+
+    margin: 0;
+    padding: 0;
+    font-size: calc(1svw + .8em);
+
+}
+
+main #isim{
+
+    display: flex;
+    width: 40%;
+
+}
+
+main #isim .oyunici{
+
+    width: 100%;
+    height: auto;
+    
+}
+
+main #isim .baslat{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+
+main #isim input{
+
+    padding: 0;
+    width: 55%;
+    height: 100%;
+    border: 1px solid #857fad;
+    border-radius: 1.5em;
+    padding-left: calc(1svw + .2em);
+    background-color: #defcf9;
+    transition: all .2s ease;
+    font-family: Quicksand;
+    font-weight: bolder;
+    font-size: calc(1svw + .2em);
+    margin: 0;
+
+}
+
+main #isim input:focus, main #isim input:hover{
+
+    background-color: #cadefc;
+
+}
+
+main #isim button{
+
+    padding: 0;
+    margin: 0;
+    border: 1px solid #272343;
+    width: 30%;
+    height: 100%;
+    border-radius: 1.5em;
+    padding: .75svw;
+    background-color: #defcf9;
+    transition: all .2s ease;
+    font-family: Quicksand;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: calc(1svw + .2em);
+
+}
+
+main #isim button:hover, main #isim button:focus{
+
+    background-color: #283739;
+    color: #defcf9;
+    
+}
+
+main #soru{
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 40%;
+    height: auto;
+
+}
+
+main #soru .sorubaslik{
+
+    margin: 0 0 1em 0;
+    padding: 0;
+    font-size: calc(1svw + 1em);
+    width: auto;
+    height: auto;
+
+}
+
+main #soru .secenek{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+}
+
+main #soru .secenek .cevap{
+
+    width: 75%;
+    margin: .5em;
+    padding: 0;
+    height: auto;
+    padding: .75svw;
+    border-radius: 1em;
+    box-shadow: 0 0 .5svw #49484d;
+    cursor: pointer;
+    transition: all .2s ease;
+    border: 1px solid transparent;
+
+}
+
+main #soru .secenek .cevap:hover{
+
+    box-shadow: none;
+    border: 1px solid #49484d;
+
+}
+
+main #soru .islem{
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    overflow-wrap: normal;
+    flex-wrap: nowrap;
+
+}
+
+main #soru .islem h2{
+
+    max-width: 35%;
+
+}
+
+main #soru .islem h2 i{
+
+    font-weight: lighter;
+
+}
+
+main #soru .islem button{
+
+    width: 20%;
+    height: 100%;
+    padding: .7svw;
+    border-radius: 1em;
+    border: none;
+    font-family: Montserrat;
+    font-size: calc(1svw + .2em);
+    cursor: pointer;
+    transition: all .2s ease;
+
+}
+
+main #soru .islem .pas{
+
+    background-color: rgb(255, 255, 0);
+    border: 1px solid rgb(235, 235, 19);
+    box-shadow: 0 0 .5svw rgb(143, 143, 4);
+
+}
+
+main #soru .islem .bitir{
+
+    background-color: rgb(83, 219, 4);
+    border: 1px solid rgb(51, 194, 15);
+    box-shadow: 0 0 .5svw rgb(110, 110, 6);
+
+}
+
+main #soru .islem .pas:hover{
+
+    background-color: rgb(238, 234, 29);
+    box-shadow: none;
+    color: #272343;
+
+}
+
+main #soru .islem .bitir:hover{
+
+    background-color: rgb(95, 252, 4);
+    box-shadow: none;
+    color: #1b1b1d;
+
+}
+
+main .tr{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+
+}
+
+main .tablo{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #bae8e8;
+    box-shadow: 0 0 1svw #272343;
+    font-size: calc(.5svw + .2em);
+    border-radius: 2em;
+    width: 20%;
+    padding: 2.5em 1.5svw;
+
+}
+
+main #bitis{
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+main #bitis .kapat{
+
+    position: absolute;
+    top: 0;
+    right: 1em;
+    cursor: pointer;
+
+}
+
+main #bitis video{
+
+    width: calc(15em + 15%);
+    margin: 0;
+    padding: 0;
+    border-radius: 2em;
+
+}
+
+main #bitis .ismi{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+main #bitis .puani{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+main #joker{
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: -2em;
+    right: -5em;
+    width: auto;
+    height: auto;
+    font-size: calc(1svw + .2em);
+    box-shadow: 0 0 1svw #1b1b1d;
+    z-index: 1000;
+
+}
+
+main #joker h2{
+
+    cursor: pointer;
+
+}
+
+main #yagizjoker{
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000000;
+
+}
+
+main #yagizjoker video{
+
+    width: calc(15em + 15%);
+    border-radius: 2em;
+    box-shadow: 0 0 1em #000000;
+
+}
+
+
+main #reklam{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 2.5em 1.5svw;
+    background-color: #defcf9;
+    border-radius: 1em;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    margin: 0;
+    width: calc(7.5em + 7.5svw);
+    min-width: 10em;
+
+}
+
+main #reklam:hover ~ main #reklam .site a{
+
+    box-shadow: 0 0 1svw #c5c5c5;
+
+}
+
+main #reklam a{
+
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: 550;
+    font-size: calc(1em + .75svw);
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: calc(.75em + .5svw);
+    color: black;
+    line-height: 150%;
+    transition: all .2s ease;
+    padding: .75svw;
+    
+}
+
+main #reklam .site{
+
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    padding: calc(.15svw + .6em);
+    display: inline-block;
+    border-radius: 1em;
+    transition: all .2s ease-in-out;
+    
+}
+
+main #reklam .site:hover a{
+
+    display: inline-block;
+    background-color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(212, 198, 198);
+    border-radius: 1svw;
+
+}
+
+
+#kanitla::after{
+
+    content: 'Seçtiğin alanda bilgini kanıtla!';
+
+}
+
+#cografya::after{
+
+    content: 'Coğrafya bilgini kanıtla!';
+
+}
+
+#kelime::after{
+
+    content: 'Önceki kelimenin son harfi ile kelime türet, kelime dağarcığını genişlet!';
+
+}
+
+.site::after{
+
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    scale: 1;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all .2s ease;
+    opacity: 0;
+    margin-top: -1em;
+    border-radius: 1svw;
+    box-shadow: 0 0 .75svw rgb(226, 213, 213);
+    font-size: .5em;
+
+}
+
+.site:hover::after{
+
+    opacity: 1;
+    margin-top: 0;
+    font-size: 1em;
+    padding: 1svw;
+
+}
